@@ -1,0 +1,18 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+Users:
+<body>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Pet</th>
+    </tr>
+    <tr th:each="user: ${users}">
+        <td th:text="${user.name}">Column 1</td>
+        <td th:text="${user.age}">Column 2</td>
+        <td th:text="${user.pet}">Column 3</td>
+    </tr>
+</table>
+</body>
+</html>
