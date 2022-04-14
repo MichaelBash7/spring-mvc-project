@@ -1,0 +1,18 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add pet</title>
+    <head/>
+<body>
+
+<form id="add-pet-form" th:action="@{/pet/add}" th:method="post" action="add-pet-page.html">
+    <h1>Pet:</h1>
+
+    <div class="row">
+        <label for="species-input">Species:</label>
+        <input id="species-input" name="species" type="text" value=""/>
+    </div>
+</form>
+
+</body>
+</html>

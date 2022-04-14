@@ -26,4 +26,22 @@ public class PetServiceImpl implements PetService{
         Pet pet = petRepository.getBySpecies(species).get();
         System.out.println(pet);
     }
+
+    @Transactional
+    @Override
+    public void createPet(Pet pet) {
+        petRepository.save(pet);
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public Pet getPetById(long id) {
+        return petRepository.findById(id).get();
+    }
+
+    @Transactional
+    @Override
+    public void deletePetById(long id) {
+        petRepository.deleteById(id);
+    }
 }

@@ -7,6 +7,5 @@ import java.util.List;
 public interface UserService {
 
     void printAllUsers();
-
     List<User> getAllUsers();
 }
