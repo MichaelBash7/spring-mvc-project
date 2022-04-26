@@ -18,6 +18,6 @@ public class PetDto {
         if (petDto.id == null){
             petDto.id = "0";
         }
-        return new Pet(Long.parseLong(petDto.id), petDto.getSpecies());
+        return new Pet(Long.parseLong(petDto.id), petDto.species);
     }
 }

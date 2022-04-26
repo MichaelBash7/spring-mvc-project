@@ -1,0 +1,21 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+Pet:
+<body>
+<table>
+    <tr th:each="pet: ${pets}">
+        <td th:text="${pet.id}">Id</td>
+        <td th:text="${pet.species}">Species</td>
+        <td>
+            <a th:href="@{/pet/{id}/edit(id=${pet.id})}" href="edit-pet-page.html">Update</a>
+        </td>
+        <td>
+            <a th:href="@{/pet/{id}/delete(id=${pet.id})}" href="delete-pet-page.html">Delete</a>
+        </td>
+    </tr>
+</table>
+
+<a th:href="@{/pet/add}" href="add-pet-page.html">Add new Pet</a>
+
+</body>
+</html>

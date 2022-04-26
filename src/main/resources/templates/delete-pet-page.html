@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Delete pet</title>
+</head>
+<body>
+
+<form id="edit-form" th:action="@{/pet/{id}/delete(id=${petDto.id})}" th:method="post" action="delete-pet-page.html">
+    <h1>Pet</h1>
+
+    <div class="row">
+        <label for="title-input">Species:</label>
+        <input id="title-input" name="name" type="text" readonly="readonly" th:value="${petDto.species}" value="Default Name"/>
+    </div>
+
+    <div class="row">
+        <button type="submit">Delete</button>
+    </div>
+</form>
+
+</body>

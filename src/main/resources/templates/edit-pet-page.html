@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Edit pet</title>
+</head>
+<body>
+
+<form id="edit-form" th:action="@{/pet/{id}/edit(id=${petDto.id})}" th:method="post" action="edit-pet-page.html">
+    <h1>Pet</h1>
+
+    <div class="row">
+        <label for="id-input">ID:</label>
+        <input id="id-input" type="text" readonly="readonly" th:value="${petDto.id}" value="1"/>
+    </div>
+
+    <div class="row">
+        <label for="species-input">Species:</label>
+        <input id="species-input" name="species" type="text" th:value="${petDto.species}" value=""/>
+    </div>
+
+    <div class="row">
+        <button type="submit">Save</button>
+    </div>
+</form>
+
+</body>
