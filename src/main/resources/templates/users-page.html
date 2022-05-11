@@ -4,15 +4,25 @@ Users:
 <body>
 <table border="1">
     <tr>
+        <th>Id</th>
         <th>Name</th>
         <th>Age</th>
         <th>Pet</th>
     </tr>
     <tr th:each="user: ${users}">
-        <td th:text="${user.name}">Column 1</td>
-        <td th:text="${user.age}">Column 2</td>
-        <td th:text="${user.pet}">Column 3</td>
+        <td th:text="${user.id}">Column 1</td>
+        <td th:text="${user.name}">Column 2</td>
+        <td th:text="${user.age}">Column 3</td>
+        <td th:text="${user.pet}">Column 4</td>
+    <td>
+        <a th:href="@{/user/{id}/edit(id=${user.id})}" href="edit-user-page.html">Update</a>
+    </td>
+    <td>
+        <a th:href="@{/user/{id}/delete(id=${user.id})}" href="delete-user-page.html">Delete</a>
+    </td>
     </tr>
 </table>
+
+<a th:href="@{/user/add}" href="add-user-page.html">Add new User</a>
 </body>
 </html>

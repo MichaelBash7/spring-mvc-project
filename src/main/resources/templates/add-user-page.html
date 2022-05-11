@@ -1,0 +1,26 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add user</title>
+    <head/>
+<body>
+
+<form id="add-user-form" th:action="@{/user/add}" th:method="post" action="add-user-page.html">
+    <h1>User:</h1>
+
+    <div class="row">
+        <label for="name-input">Name:</label>
+        <input id="name-input" name="name" type="text" value=""/>
+    </div>
+    <div class="row">
+        <label for="age-input">Age:</label>
+        <input id="age-input" name="age" type="text" value=""/>
+    </div>
+    <div class="row">
+        <label for="pet-input">Pet:</label>
+        <input id="pet-input" name="pet" type="text" value=""/>
+    </div>
+</form>
+
+</body>
+</html>

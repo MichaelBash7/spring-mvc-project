@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Delete user</title>
+</head>
+<body>
+
+<form id="delete-form" th:action="@{/user/{id}/delete(id=${userDto.id})}" th:method="post" action="delete-user-page.html">
+    <h1>User</h1>
+    <div class="row">
+        <label for="id-input">Id:</label>
+        <input id="id-input" name="id" type="text" readonly="readonly" th:value="${userDto.id}" value="Default Name"/>
+    </div>
+
+    <div class="row">
+        <label for="name-input">Name:</label>
+        <input id="name-input" name="name" type="text" readonly="readonly" th:value="${userDto.name}" value="Default Name"/>
+    </div>
+    <div class="row">
+        <label for="age-input">Age:</label>
+        <input id="age-input" name="age" type="text" readonly="readonly" th:value="${userDto.age}" value="Default Name"/>
+    </div>
+
+    <div class="row">
+        <label for="pet-input">Pet:</label>
+        <input id="pet-input" name="pet" type="text" readonly="readonly" th:value="${userDto.pet}" value="Default Name"/>
+    </div>
+
+    <div class="row">
+        <button type="submit">Delete</button>
+    </div>
+</form>
+
+</body>
