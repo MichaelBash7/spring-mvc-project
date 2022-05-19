@@ -29,7 +29,6 @@ public class UserController {
 
     @GetMapping("user/add")
     public String addUserPage() {
-        System.out.println("get");
         return "add-user-page";
     }
 

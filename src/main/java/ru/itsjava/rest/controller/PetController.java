@@ -25,6 +25,11 @@ public class PetController {
     }
 
     @GetMapping("/")
+    public String mainPage() {
+        return "main-page";
+    }
+
+    @GetMapping("/pet")
     public String petsPage(Model model){
         List<PetDto> allPetsDto = petService.getAllPets()
                 .stream().map(PetDto::toDto).collect(Collectors.toList());
