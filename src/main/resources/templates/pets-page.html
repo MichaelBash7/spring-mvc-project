@@ -1,7 +1,8 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" type="text/css" href="@{/css/style.css}">
-Pet:
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+<title>Pets</title>
 <body>
+<h2>Pets:</h2>
 <table>
     <tr th:each="pet: ${pets}">
         <td th:text="${pet.id}">Id</td>
@@ -14,8 +15,8 @@ Pet:
         </td>
     </tr>
 </table>
-
+<p>
 <a th:href="@{/pet/add}" href="add-pet-page.html">Add new Pet</a>
-
+</p>
 </body>
 </html>

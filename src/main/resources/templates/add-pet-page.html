@@ -1,4 +1,5 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 <head>
     <meta charset="UTF-8"/>
     <title>Add pet</title>
@@ -6,7 +7,7 @@
 <body>
 
 <form id="add-pet-form" th:action="@{/pet/add}" th:method="post" action="add-pet-page.html">
-    <h1>Pet:</h1>
+    <h2>Add pet:</h2>
 
     <div class="row">
         <label for="species-input">Species:</label>

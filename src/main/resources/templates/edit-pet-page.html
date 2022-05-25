@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 <head>
     <meta charset="UTF-8"/>
     <title>Edit pet</title>
@@ -7,7 +8,7 @@
 <body>
 
 <form id="edit-form" th:action="@{/pet/{id}/edit(id=${petDto.id})}" th:method="post" action="edit-pet-page.html">
-    <h1>Pet</h1>
+    <h2>Edit pet</h2>
 
     <div class="row">
         <label for="id-input">ID:</label>

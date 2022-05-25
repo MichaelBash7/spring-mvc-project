@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 <head>
     <meta charset="UTF-8"/>
     <title>Edit user</title>
@@ -7,7 +8,7 @@
 <body>
 
 <form id="edit-form" th:action="@{/user/{id}/edit(id=${userDto.id})}" th:method="post" action="edit-user-page.html">
-    <h1>User</h1>
+    <h2>Edit user</h2>
 
     <div class="row">
         <label for="id-input">ID:</label>

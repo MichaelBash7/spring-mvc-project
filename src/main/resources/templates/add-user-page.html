@@ -1,4 +1,5 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 <head>
     <meta charset="UTF-8"/>
     <title>Add user</title>
@@ -6,7 +7,7 @@
 <body>
 
 <form id="add-user-form" th:action="@{/user/add}" th:method="post" action="add-user-page.html">
-    <h1>User:</h1>
+    <h2>Add user</h2>
 
     <div class="row">
         <label for="name-input">Name:</label>

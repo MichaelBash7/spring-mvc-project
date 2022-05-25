@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 <head>
     <meta charset="UTF-8"/>
     <title>Delete pet</title>
@@ -7,7 +8,7 @@
 <body>
 
 <form id="edit-form" th:action="@{/pet/{id}/delete(id=${petDto.id})}" th:method="post" action="delete-pet-page.html">
-    <h1>Pet</h1>
+    <h2>Delete pet</h2>
 
     <div class="row">
         <label for="title-input">Species:</label>
