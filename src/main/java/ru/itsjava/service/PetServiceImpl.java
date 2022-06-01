@@ -51,11 +51,13 @@ public class PetServiceImpl implements PetService{
         petRepository.delete(pet);
     }
 
+    @Transactional
     @Override
     public List<Pet> getAllPets() {
         return petRepository.findAll();
     }
 
+    @Transactional
     @Override
     public void updatePet(Pet pet) {
         petRepository.save(pet);

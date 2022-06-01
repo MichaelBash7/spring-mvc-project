@@ -34,7 +34,6 @@ public class UserController {
 
     @PostMapping("user/add")
     public String afterAddUserPage(UserDto userDto) {
-        System.out.println("post");
         userService.createUser(UserDto.fromDto(userDto));
         return "redirect:/user";
     }
