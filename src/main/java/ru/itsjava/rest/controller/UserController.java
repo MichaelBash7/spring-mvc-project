@@ -3,9 +3,7 @@ package ru.itsjava.rest.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import ru.itsjava.domain.User;
 import ru.itsjava.rest.dto.UserDto;
 import ru.itsjava.service.UserService;
@@ -32,8 +30,12 @@ public class UserController {
         return "add-user-page";
     }
 
+
     @PostMapping("user/add")
     public String afterAddUserPage(UserDto userDto) {
+        if (UserDto.fromDto(userDto).getAge() <= 0 || UserDto.fromDto(userDto).getAge() >= 130){
+            return "error-page";
+        }
         userService.createUser(UserDto.fromDto(userDto));
         return "redirect:/user";
     }

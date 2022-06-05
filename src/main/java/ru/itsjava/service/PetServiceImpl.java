@@ -51,7 +51,7 @@ public class PetServiceImpl implements PetService{
         petRepository.delete(pet);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     @Override
     public List<Pet> getAllPets() {
         return petRepository.findAll();

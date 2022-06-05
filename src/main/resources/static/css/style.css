@@ -7,7 +7,6 @@ h1 {
 
 h2 {
     font: bold 26px/50px "Times New Roman";
-
 }
 
 nav a {
@@ -63,8 +62,6 @@ p a {
     text-decoration: none;
 }
 
-
-
 td a {
     display: inline-block;
     position: relative;
@@ -79,6 +76,7 @@ td a {
 td a:hover {
     color: #3C9CE7;
 }
+
 td a:before {
     content: "\25BA";
     font-size: 80%;

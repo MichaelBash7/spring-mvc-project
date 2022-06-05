@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.itsjava.domain.User;
-import ru.itsjava.repository.PetRepository;
 import ru.itsjava.repository.UserRepository;
 
 import java.util.List;
@@ -13,7 +12,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
-    private final PetRepository petRepository;
 
     @Transactional(readOnly = true)
     @Override
@@ -24,7 +22,7 @@ public class UserServiceImpl implements UserService {
     }
 
 
-    @Transactional
+    @Transactional(readOnly = true)
     @Override
     public List<User> getAllUsers() {
         return userRepository.findAll();
@@ -51,8 +49,6 @@ public class UserServiceImpl implements UserService {
     @Transactional
     @Override
     public void deleteUser(User user) {
-//        petRepository.deletePetByUser(user);
         userRepository.delete(user);
-
     }
 }
