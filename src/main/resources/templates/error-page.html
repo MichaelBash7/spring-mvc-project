@@ -1,10 +1,15 @@
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <title>Error</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 </head>
 <body>
-<h1>Invalid Age Error!</h1>
+<h2>Invalid Age Error!</h2>
 <p>Age must be between 1 and 129</p>
+<p>
+    <a th:href="@{/user}" href="users-page.html">Back</a>
+</p>
+
 </body>
 </html>

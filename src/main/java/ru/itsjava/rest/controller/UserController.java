@@ -49,6 +49,9 @@ public class UserController {
 
     @PostMapping("user/{id}/edit")
     public String afterEditUserPage(UserDto userDto) {
+        if (UserDto.fromDto(userDto).getAge() <= 0 || UserDto.fromDto(userDto).getAge() >= 130){
+            return "error-page";
+        }
         userService.updateUser(UserDto.fromDto(userDto));
         return "redirect:/user";
     }

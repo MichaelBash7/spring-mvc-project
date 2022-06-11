@@ -27,7 +27,7 @@ public class UserServiceImplTest {
     @Test
     public void shouldHaveCorrectGetAllUsers(){
         var expectedUsers = entityManager
-                .createQuery("select distinct u from user u join fetch u.pet", User.class)
+                .createQuery("select distinct u from User u join fetch u.pet", User.class)
                 .getResultList();
         var actualUsers = userService.getAllUsers();
 
@@ -37,7 +37,7 @@ public class UserServiceImplTest {
     @Test
     public void shouldHaveCorrectPrintAllUsers(){
         var expectedUsers = entityManager
-                .createQuery("select distinct u from user u join fetch u.pet", User.class)
+                .createQuery("select distinct u from User u join fetch u.pet", User.class)
                 .getResultList().toString();
         var actualUsers = userService.getAllUsers().toString();
 
